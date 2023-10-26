@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 # Project Specific
-*Ignore
-
+Ignore/
+.DS_Store
