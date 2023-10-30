@@ -1,53 +1,53 @@
-,YearStart,LocationDesc,Question,DataValue
-1682,2019,Delaware,Mortality from total cardiovascular diseases,214.3
-1985,2019,Georgia,Mortality from total cardiovascular diseases,234.3
-2524,2019,Alaska,Mortality from total cardiovascular diseases,178.5
-3252,2019,Kentucky,Mortality from total cardiovascular diseases,253.8
-3322,2019,Arkansas,Mortality from total cardiovascular diseases,284.3
-3476,2019,Massachusetts,Mortality from total cardiovascular diseases,168.2
-3521,2019,Hawaii,Mortality from total cardiovascular diseases,169.8
-3718,2019,Florida,Mortality from total cardiovascular diseases,195.1
-4140,2019,Arizona,Mortality from total cardiovascular diseases,181.8
-4663,2019,Alabama,Mortality from total cardiovascular diseases,289.3
-4683,2019,Connecticut,Mortality from total cardiovascular diseases,182.5
-4782,2019,Illinois,Mortality from total cardiovascular diseases,216.4
-4808,2019,Kansas,Mortality from total cardiovascular diseases,216.8
-4859,2019,Iowa,Mortality from total cardiovascular diseases,222.4
-4869,2019,Louisiana,Mortality from total cardiovascular diseases,264.0
-4986,2019,Maryland,Mortality from total cardiovascular diseases,217.9
-5953,2019,Idaho,Mortality from total cardiovascular diseases,197.4
-5984,2019,Indiana,Mortality from total cardiovascular diseases,238.5
-6046,2019,Colorado,Mortality from total cardiovascular diseases,175.0
-6079,2019,District of Columbia,Mortality from total cardiovascular diseases,232.8
-7043,2019,California,Mortality from total cardiovascular diseases,192.5
-7579,2019,Wyoming,Mortality from total cardiovascular diseases,196.9
-8219,2019,Utah,Mortality from total cardiovascular diseases,193.0
-12862,2019,Maine,Mortality from total cardiovascular diseases,187.6
-12884,2019,Oregon,Mortality from total cardiovascular diseases,189.6
-13087,2019,Missouri,Mortality from total cardiovascular diseases,238.1
-13147,2019,Minnesota,Mortality from total cardiovascular diseases,166.2
-13184,2019,Rhode Island,Mortality from total cardiovascular diseases,201.8
-13432,2019,New York,Mortality from total cardiovascular diseases,208.1
-13674,2019,Montana,Mortality from total cardiovascular diseases,199.9
-13755,2019,Oklahoma,Mortality from total cardiovascular diseases,285.7
-13857,2019,New Jersey,Mortality from total cardiovascular diseases,202.7
-14157,2019,Nebraska,Mortality from total cardiovascular diseases,194.2
-14457,2019,United States,Mortality from total cardiovascular diseases,214.6
-15286,2019,Wisconsin,Mortality from total cardiovascular diseases,207.2
-15319,2019,West Virginia,Mortality from total cardiovascular diseases,260.1
-15502,2019,Washington,Mortality from total cardiovascular diseases,186.4
-15670,2019,Virginia,Mortality from total cardiovascular diseases,202.7
-15697,2019,Vermont,Mortality from total cardiovascular diseases,200.5
-17765,2019,South Carolina,Mortality from total cardiovascular diseases,223.7
-19140,2019,Texas,Mortality from total cardiovascular diseases,217.5
-19177,2019,Tennessee,Mortality from total cardiovascular diseases,262.5
-19420,2019,South Dakota,Mortality from total cardiovascular diseases,208.4
-20461,2019,North Dakota,Mortality from total cardiovascular diseases,198.6
-20764,2019,Pennsylvania,Mortality from total cardiovascular diseases,221.6
-20786,2019,Michigan,Mortality from total cardiovascular diseases,250.0
-20943,2019,Nevada,Mortality from total cardiovascular diseases,252.2
-21006,2019,North Carolina,Mortality from total cardiovascular diseases,212.1
-21191,2019,Mississippi,Mortality from total cardiovascular diseases,299.6
-21232,2019,Ohio,Mortality from total cardiovascular diseases,247.8
-21421,2019,New Hampshire,Mortality from total cardiovascular diseases,185.0
-21777,2019,New Mexico,Mortality from total cardiovascular diseases,204.0
+YearStart,LocationDesc,Question,DataValue
+2019,Delaware,Mortality from total cardiovascular diseases,214.3
+2019,Georgia,Mortality from total cardiovascular diseases,234.3
+2019,Alaska,Mortality from total cardiovascular diseases,178.5
+2019,Kentucky,Mortality from total cardiovascular diseases,253.8
+2019,Arkansas,Mortality from total cardiovascular diseases,284.3
+2019,Massachusetts,Mortality from total cardiovascular diseases,168.2
+2019,Hawaii,Mortality from total cardiovascular diseases,169.8
+2019,Florida,Mortality from total cardiovascular diseases,195.1
+2019,Arizona,Mortality from total cardiovascular diseases,181.8
+2019,Alabama,Mortality from total cardiovascular diseases,289.3
+2019,Connecticut,Mortality from total cardiovascular diseases,182.5
+2019,Illinois,Mortality from total cardiovascular diseases,216.4
+2019,Kansas,Mortality from total cardiovascular diseases,216.8
+2019,Iowa,Mortality from total cardiovascular diseases,222.4
+2019,Louisiana,Mortality from total cardiovascular diseases,264.0
+2019,Maryland,Mortality from total cardiovascular diseases,217.9
+2019,Idaho,Mortality from total cardiovascular diseases,197.4
+2019,Indiana,Mortality from total cardiovascular diseases,238.5
+2019,Colorado,Mortality from total cardiovascular diseases,175.0
+2019,District of Columbia,Mortality from total cardiovascular diseases,232.8
+2019,California,Mortality from total cardiovascular diseases,192.5
+2019,Wyoming,Mortality from total cardiovascular diseases,196.9
+2019,Utah,Mortality from total cardiovascular diseases,193.0
+2019,Maine,Mortality from total cardiovascular diseases,187.6
+2019,Oregon,Mortality from total cardiovascular diseases,189.6
+2019,Missouri,Mortality from total cardiovascular diseases,238.1
+2019,Minnesota,Mortality from total cardiovascular diseases,166.2
+2019,Rhode Island,Mortality from total cardiovascular diseases,201.8
+2019,New York,Mortality from total cardiovascular diseases,208.1
+2019,Montana,Mortality from total cardiovascular diseases,199.9
+2019,Oklahoma,Mortality from total cardiovascular diseases,285.7
+2019,New Jersey,Mortality from total cardiovascular diseases,202.7
+2019,Nebraska,Mortality from total cardiovascular diseases,194.2
+2019,United States,Mortality from total cardiovascular diseases,214.6
+2019,Wisconsin,Mortality from total cardiovascular diseases,207.2
+2019,West Virginia,Mortality from total cardiovascular diseases,260.1
+2019,Washington,Mortality from total cardiovascular diseases,186.4
+2019,Virginia,Mortality from total cardiovascular diseases,202.7
+2019,Vermont,Mortality from total cardiovascular diseases,200.5
+2019,South Carolina,Mortality from total cardiovascular diseases,223.7
+2019,Texas,Mortality from total cardiovascular diseases,217.5
+2019,Tennessee,Mortality from total cardiovascular diseases,262.5
+2019,South Dakota,Mortality from total cardiovascular diseases,208.4
+2019,North Dakota,Mortality from total cardiovascular diseases,198.6
+2019,Pennsylvania,Mortality from total cardiovascular diseases,221.6
+2019,Michigan,Mortality from total cardiovascular diseases,250.0
+2019,Nevada,Mortality from total cardiovascular diseases,252.2
+2019,North Carolina,Mortality from total cardiovascular diseases,212.1
+2019,Mississippi,Mortality from total cardiovascular diseases,299.6
+2019,Ohio,Mortality from total cardiovascular diseases,247.8
+2019,New Hampshire,Mortality from total cardiovascular diseases,185.0
+2019,New Mexico,Mortality from total cardiovascular diseases,204.0
