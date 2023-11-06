@@ -1,51 +1,51 @@
-State,Population Density per mi²
-New Jersey,1283.4
-Rhode Island,1074.3
-Massachusetts,919.82
-Connecticut,746.7
-Maryland,648.84
-Delaware,522.09
-New York,433.9
-Florida,416.96
-Pennsylvania,292.62
-Ohio,290.7
-California,258.21
-Hawaii,231.01
-Illinois,230.68
-Virginia,223.36
-North Carolina,220.3
-Indiana,191.93
-Georgia,191.59
-Michigan,179.26
-South Carolina,175.19
-Tennessee,171.71
-New Hampshire,155.91
-Washington,120.37
-Texas,116.16
-Kentucky,115.38
-Wisconsin,109.97
-Louisiana,108.67
-Alabama,100.65
-Missouri,90.26
-West Virginia,73.88
-Minnesota,73.18
-Vermont,70.34
-Arizona,64.96
-Mississippi,63.07
-Oklahoma,58.63
-Arkansas,58.43
-Iowa,57.89
-Colorado,57.86
-Oregon,45.41
-Maine,44.5
-Utah,41.67
-Kansas,36.24
-Nevada,29.38
-Nebraska,26.06
-Idaho,23.24
-New Mexico,17.6
-South Dakota,11.98
-North Dakota,11.75
-Montana,7.64
-Wyoming,5.98
-Alaska,1.3
+,State,Population Density per mi²
+0,New Jersey,"1,283.4"
+1,Rhode Island,"1,074.3"
+2,Massachusetts,919.82
+3,Connecticut,746.7
+4,Maryland,648.84
+5,Delaware,522.09
+6,New York,433.9
+7,Florida,416.96
+8,Pennsylvania,292.62
+9,Ohio,290.7
+10,California,258.21
+11,Hawaii,231.01
+12,Illinois,230.68
+13,Virginia,223.36
+14,North Carolina,220.3
+15,Indiana,191.93
+16,Georgia,191.59
+17,Michigan,179.26
+18,South Carolina,175.19
+19,Tennessee,171.71
+20,New Hampshire,155.91
+21,Washington,120.37
+22,Texas,116.16
+23,Kentucky,115.38
+24,Wisconsin,109.97
+25,Louisiana,108.67
+26,Alabama,100.65
+27,Missouri,90.26
+28,West Virginia,73.88
+29,Minnesota,73.18
+30,Vermont,70.34
+31,Arizona,64.96
+32,Mississippi,63.07
+33,Oklahoma,58.63
+34,Arkansas,58.43
+35,Iowa,57.89
+36,Colorado,57.86
+37,Oregon,45.41
+38,Maine,44.5
+39,Utah,41.67
+40,Kansas,36.24
+41,Nevada,29.38
+42,Nebraska,26.06
+43,Idaho,23.24
+44,New Mexico,17.6
+45,South Dakota,11.98
+46,North Dakota,11.75
+47,Montana,7.64
+48,Wyoming,5.98
+49,Alaska,1.3
