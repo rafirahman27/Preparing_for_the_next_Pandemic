@@ -9,9 +9,9 @@ In 2023, with the total number of new coronavirus cases decreasing and the Pande
 HHS received funding for this analysis and hired our consulting firm, FF consulting, to develop machine learning models that could explain which variables were most strongly linked to covid outcomes. HHS specifically was interested not only in different policy explanations, but also asked us to consider demographics such as age and race, the pre-existing health conditions of the populations, income, education, and any other factors we found to be potentially causational. 
 
 ## Background:
-Both in terms of total deaths, as well as deaths per capita, The United States fared worse than most other countries during the coronoavirus pandemic. In the United States, more than 341 people out of 100,000 died due to coronavirus. Only Peru had per population more deaths than the United States (John Hopkins Coronavirus Resource Center). Some states and counties within the United States fared better or worse than others (Lancet study). 
+Both in terms of total deaths, as well as deaths per capita, The United States fared worse than most other countries during the coronavirus pandemic. In the United States, more than 341 people out of 100,000 died due to coronavirus. Only Peru had per population more deaths than the United States (John Hopkins Coronavirus Resource Center). Some states and counties within the United States fared better or worse than others (Lancet study). 
 
-With the pandemic occuring so recently, there are few comprehensive studies examining the links between coronavirus outcomes and different factors such as demographic differences or policy choices. However... 
+With the pandemic occurring so recently, there are few comprehensive studies examining the links between coronavirus outcomes and different factors such as demographic differences or policy choices. However we were able to find a few studies examining coronavirus outcomes in the United States and abroad. 
 
 
 https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(23)00461-0/fulltext
@@ -119,28 +119,50 @@ https://www.kff.org/other/state-indicator/total-population/?currentTimeframe=0&s
 |Employment_year|numeric|Total Employment by year| 
 |Inc_Per_Cap_year|float|Income per capita by year| 
 |Life_expectancy_year|float|The average life_expectancy of the country during that year| 
-|Employer_2019|float|??| 
-|Non-group|numeric|Total Employment by year| 
-|Medicaid|float|Income per capita by year| 
-|Medicare|float|The average life_expectancy of the country during that year| 
-|Military|float|??| 
-|Uninsured|numeric|Total Employment by year| 
-|Population_Density_per mi2|float|Income per capita by year| 
-|year Population|float|The average life_expectancy of the country during that year| 
-|flu_vaccination_rate_2019|float|??| 
+|Employer_2019|float|Employer sponsored insurance| 
+|Non-group|numeric|Non-group| 
+|Medicaid|float|Percent enrolled in Medicaid| 
+|Medicare|float|Percent enrolled in Medicare| 
+|Military|float|Military| 
+|Uninsured|numeric|Total Uninsured| 
+|Population_Density_per mi2|float|Population Density per sq mile| 
+|year Population|float|The population for that year| 
+|flu_vaccination_rate_2019|float|the percent of population vaccinated for the flu| 
+|asthma_prevalence|numeric|Percent of population diagnosed with asthma| 
+|cardiac_mortality_rate|float|population standardized mortality rate| 
+|high_bp_prevalence|float|The percent of the population aware of high blood pressure| 
+|copd_prevalence|float|The percent of population diagnosed with COPD| 
+|kidney_disase_prevalence|float|The percent of the population diagnosed with kidney disease| 
+|diabetes_prevalence|float|Percent of population diagnosed with diabetes| 
+|Physicians|float|The number of physicians| 
+|Physicians Rate|float|The number of physicians scaled to population| 
+|Active MO|numeric|Number of Active MO| 
+|Active MO Rate|float|The number of active MO scaled to population| 
+|Active DO|float|The number of active DO| 
+|Dist_Per_100K_year|float|The number of doses of covid-19 vaccine distributed in year by 100k population| 
+|Dist_Per_100K_year|float|Population scaled number of doses distributed to individuals over 65|
+|Admin_Per_100K_year|float|Population scaled number of doses administered|
+|Admin_Per_100K_65Plus_year|float|Population scaled number of doses administered to individuals over 65|
+|Additional_Doses_Vax_Pct_year|float|Percent of population receiving a second dose|
+|Mandatory|float|The number of days a vaccine mandate was in effect|
+|Current President|float|Approval of the current president|
+|Your State Governor|float|Approval of the governor of the state|
+|Go to Work|float|Percent of respondents who say they go in to work|
+|Go to the Gym|float|Percent of respondents who say they go to the gym|
+|Go Visit a friend|float|Percent of respondents who stated they visit friends|
+|Go to a cafe, bar, or a restaurant|float|Percent of respondents who went to cafes, bars, and restaurants|
+|Go to a doctor or visit a hospital|float|Percent of respondents who went to or visited a hospital|
+|Go to church or another place of worship|float|Percent of respondents who said they go to a place of worship|
+|Take mass transit|float|Percent of respondents who said they take mass transit|
+|Avoiding contact with other people|float|Percent of respondents who say they avoid contact with other people|
+|Avoiding public or crowded places|float|Percent of respondents who say they avoid public or crowded places|
+|Frequently washing hands|float|Percent of respondents who say they frequently wash their hands|
+|Wearing a face mask when outside of your home|float|Percent of respondents who say they wear a fask mask outside of their home|
+|Been in a room with someone outside of household in the past 24 hours|float|Percent of respondents|
+|Yes, 5-10 people|float|Percent of respondents who have been around 5-10 people|
+|Yes, 11-50 people|float|Percent of respondents who have been around 11-50 people|
+|Yes, 50 or more people people|float|Percent of respondents who have been around 50 ormore people|
 
-|asthma_prevalence|numeric|Total Employment by year| 
-|Inc_Per_Cap_year|float|Income per capita by year| 
-|Life_expectancy_year|float|The average life_expectancy of the country during that year| 
-|Employer_2019|float|??| 
-|Non-group|numeric|Total Employment by year| 
-|Medicaid|float|Income per capita by year| 
-|Medicare|float|The average life_expectancy of the country during that year| 
-|Military|float|??| 
-|Uninsured|numeric|Total Employment by year| 
-|Population_Density_per mi2|float|Income per capita by year| 
-|year Population|float|The average life_expectancy of the country during that year| 
-|flu_vaccination_rate_2019|float|??| 
 
 #### State Models
 |Feature|Type| Description|
@@ -158,29 +180,19 @@ https://www.kff.org/other/state-indicator/total-population/?currentTimeframe=0&s
 |year Population|float|The average life_expectancy of the country during that year| 
 |flu_vaccination_rate_2019|float|??| 
 
-|asthma_prevalence|numeric|Total Employment by year| 
-|Inc_Per_Cap_year|float|Income per capita by year| 
-|Life_expectancy_year|float|The average life_expectancy of the country during that year| 
-|Employer_2019|float|??| 
-|Non-group|numeric|Total Employment by year| 
-|Medicaid|float|Income per capita by year| 
-|Medicare|float|The average life_expectancy of the country during that year| 
-|Military|float|??| 
-|Uninsured|numeric|Total Employment by year| 
-|Population_Density_per mi2|float|Income per capita by year| 
-|year Population|float|The average life_expectancy of the country during that year| 
-|flu_vaccination_rate_2019|float|??| 
 
 
 ## Data Cleaning & EDA:
-Link to tableau dashboard
+Initial data cleaning of large csv files took place in the Data Collection and Cleaning notebook found in the Code folder. The size of large files was reduced by selecting the minimum variables of interest for time periods of signficance. The smaller dataframes were then saved as CSVs in the code folder and re-accessed in the Data Cleaning and EDA notbeook. We cleaned individual data sets from the various sources and then combined the datasets into a county dataframe and a state dataframe. Most of the data had few typos and errors, however there was missing data for some variables. NJ did not report rates for pre-existing medical conditions in 2019 and therefore the 2018 statistics were substituted in. Other features of interest at the county level such as income by race and other variables by race were dropped due to a large amount of missing data. The segregation index for example was dropped from the final county model to retain as many observations as possible. At the county level, some cases and deaths were attributed to a state but not a specific county. For the county-level analysis, we used counties' share of the states population to re-allocate these cases and deaths to specific counties within a state. While more than 20 states had some unallocated deaths, only a handful had a significant number (more than 1-2% of overall cases and deaths). 
 
 ## Modeling:
 Our goal with modeling was two-fold:
 1. Develop model(s) that predicted Covid-19 outcomes as successfully as possible
 2. Develop model(s) that could be used to interpret the relationships between certain features and different outcomes.
 
-As we were concerned with 
+We developed models with multiple target variables to understand covid-19 outcomes through a broader lense. We looked at both deaths attributed to covid-19 as well as excess death statistics. Excess deaths were examined due to multiple studies suggesting that covid-19 deaths were being consistently under-reported, especially among poor and minority communities. We also examined covid-19 cases as cases also had a significant impact on populations and communities. When discussing the analysis
+
+As we were concerned with understanding the relationships between specific features and covid-19 outcomes, we first developed white-box linear regression models at both the state and county level. The results of the State models led us to begin the county-level analysis. In the OLS Stats Summary Table for the state-level linear regression model, p-values for specific variables are missing. There are two strong possibilities for why this was the case. First, while the model's r2 metric was very strong, the model contains multiple collinearr variables that can muddy the interpretation of individual variables. Second, at the state level we only had 51 observations including Puerto Rico. This is a very small sample size and makes it difficult to make conclusions about the true relationships between features and the y-variables. 
 
 ## Analysis/ Conclusions:
 
