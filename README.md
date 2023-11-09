@@ -164,24 +164,6 @@ https://www.kff.org/other/state-indicator/total-population/?currentTimeframe=0&s
 |Yes, 50 or more people people|float|Percent of respondents who have been around 50 ormore people|
 
 
-#### State Models
-|Feature|Type| Description|
-|---|---|---|
-|Employment_year|numeric|Total Employment by year| 
-|Inc_Per_Cap_year|float|Income per capita by year| 
-|Life_expectancy_year|float|The average life_expectancy of the country during that year| 
-|Employer_2019|float|??| 
-|Non-group|numeric|Total Employment by year| 
-|Medicaid|float|Income per capita by year| 
-|Medicare|float|The average life_expectancy of the country during that year| 
-|Military|float|??| 
-|Uninsured|numeric|Total Employment by year| 
-|Population_Density_per mi2|float|Income per capita by year| 
-|year Population|float|The average life_expectancy of the country during that year| 
-|flu_vaccination_rate_2019|float|??| 
-
-
-
 ## Data Cleaning & EDA:
 Initial data cleaning of large csv files took place in the Data Collection and Cleaning notebook found in the Code folder. The size of large files was reduced by selecting the minimum variables of interest for time periods of signficance. The smaller dataframes were then saved as CSVs in the code folder and re-accessed in the Data Cleaning and EDA notbeook. We cleaned individual data sets from the various sources and then combined the datasets into a county dataframe and a state dataframe. Most of the data had few typos and errors, however there was missing data for some variables. NJ did not report rates for pre-existing medical conditions in 2019 and therefore the 2018 statistics were substituted in. Other features of interest at the county level such as income by race and other variables by race were dropped due to a large amount of missing data. The segregation index for example was dropped from the final county model to retain as many observations as possible. At the county level, some cases and deaths were attributed to a state but not a specific county. For the county-level analysis, we used counties' share of the states population to re-allocate these cases and deaths to specific counties within a state. While more than 20 states had some unallocated deaths, only a handful had a significant number (more than 1-2% of overall cases and deaths). 
 
@@ -192,12 +174,71 @@ Our goal with modeling was two-fold:
 
 We developed models with multiple target variables to understand covid-19 outcomes through a broader lense. We looked at both deaths attributed to covid-19 as well as excess death statistics. Excess deaths were examined due to multiple studies suggesting that covid-19 deaths were being consistently under-reported, especially among poor and minority communities. We also examined covid-19 cases as cases also had a significant impact on populations and communities. When discussing the analysis
 
-As we were concerned with understanding the relationships between specific features and covid-19 outcomes, we first developed white-box linear regression models at both the state and county level. The results of the State models led us to begin the county-level analysis. In the OLS Stats Summary Table for the state-level linear regression model, p-values for specific variables are missing. There are two strong possibilities for why this was the case. First, while the model's r2 metric was very strong, the model contains multiple collinearr variables that can muddy the interpretation of individual variables. Second, at the state level we only had 51 observations including Puerto Rico. This is a very small sample size and makes it difficult to make conclusions about the true relationships between features and the y-variables. 
+As we were concerned with understanding the relationships between specific features and covid-19 outcomes, we first developed white-box linear regression models at both the state and county level. The results of the State models led us to begin the county-level analysis. In the OLS Stats Summary Table for the state-level linear regression model, p-values for all variables are missing. There are two strong possibilities for why this was the case. First, while the model's r2 metric was very strong, the model contains multiple collinear variables that can muddy the interpretation of individual variables. Second, at the state level we only had 51 observations including Puerto Rico. This is a very small sample size and makes it difficult to make conclusions about the true relationships between features and the y-variables. This OLS Stats summary table and modeling analysis can be found in Code-> Extra Models. Since the state level models could not provide statistically significant interpretations of specific variables, we developed a county-level linear regression model. This linear regression model had a strong r2 score and was able to account for 93% of variability in the validation data. Further, the p-values of multiple variables were small showing the coefficient to be statistically significant. 
+
+
 
 ## Analysis/ Conclusions:
+We attempted to utilize a stronger black box state model for analysis by manually changing values to create 'what-if' scenarios. However, due to the amount of features in the black box model, even changing the value of multiple variables significantly had little to no effect on predicted outcomes. Therefore, we focused more on the county-level models to analyze specific relationships. 
 
+### At the county-level:
+We conducted a handful of white box and black box models on a county basis, to predict total number of cases and total number of deaths during the COVID-19 pandemic. 
+Surprisingly, our white box models were among the most accurate. For example, our linear regression model predicting case count had a test score of 0.93, with as few as 8 x-variables. Below is a table of the largest positive and negative coefficients for our complete linear regression model predicting cases by county. 
+Key Variable 	Coefficient
+percent Native Hawaiian/Other Pacific Islander	-3,673.5
+Percent Unemployed	-1,178.9
+Average Daily PM2.5	-1,033.1
+percent_smokers	-771.1
+percent Excessive Drinking	-409.1
+percent African American	1,746.4
+percent Hispanic	1,876.8
+percent Non-Hispanic White	1,960.5
+percent American Indian/Alaskan Native	2,064.7
+water	2,682.2
+
+Our linear regression model that predicted deaths on a county basis had an accuracy of 0.90. Some of the strongest coefficients (positive or negative) are displayed in the table below. 
+ Variable Name	Coefficient
+percent Native Hawaiian/Other Pacific Islander	-196.4
+Food Environment Index	-30.6
+Percent Food Insecure	-23.0
+% Fair/Poor Health	-17.7
+Inadequate Facilities	-11.3
+Percent Insufficient Sleep	27.3
+percent Non-Hispanic White	28.1
+percent Hispanic	29.2
+percent American Indian/Alaskan Native	33.7
+water	50.3
+
+The first black box model we would like to highlight was the Extra Trees (ET) w/ Random Search CV model, which predicted total cases on a county level. This model had a test score of 0.90 After performing a Random Search CV with 100 iterations, we found ideal model features of 2,000 estimators, minimum samples leaf of 2, maximum features of 44, and a max depth of 50. Below are the key features of the model, along with their significance. 
+ Features	Importance
+Population	0.691067
+percent Asian	0.059093
+Percent Severe Housing Problems	0.055242
+Severe Housing Cost Burden	0.023799
+Average Daily PM2.5	0.018630
+percent Not Proficient in English	0.018506
+Overcrowding	0.016577
+
+The other black box model we would like to highlight was the Random Forest (RF) w/ GradBoost & Random Search CV model, which predicted total deaths on a county level. This model had a test score of 0.91. After performing a Random Search CV with 100 iterations, we found ideal model features of 200 estimators, maximum features of 43 and maximum of depth. Below are the key features of the model, along with their significance.
+ Features	Importance
+Population	0.725828
+Inadequate Facilities	0.196904
+Percent Severe Housing Problems	0.018299
+Segregation index black/white	0.012491
+Severe Housing Cost Burden	0.009958
+% Physically Inactive	0.009101
+Income Ratio	0.003917
 
 ## Initial Findings & Reccomendations:
+We found that while specific policies such as mask mandates did make an impact on covid-19 outcomes, one of the strongest and potentially most overlooked factors in predicting the variability in covid-19 outcomes was inequality. We found significantly signficant relationships between the racial demographics of specific counties and covid-19 deaths as well as significant relationships with metrics of inequality such as housing problems, segregation, median income, income inequality, and access to clean water. 
+
+Our reccommendation is to focus on preparing for the next pandemic by focusing on policies that
+- Reduce racial segregation and inequality
+- Increase healthcare access
+- Increase trust in public health officials and organizations
+- Increase public trust in vaccines
+- Increase healthcare access and insurance rates
+
 
 
 ## Next Steps & Further Study:
@@ -223,5 +264,5 @@ Further Data Collection:
 
 Future Models:
 In our initial modeling process, we explored multiple y-variables (excess deaths, total deaths attributed to covid-19, and total cases). 
-- Time series utilizing policy implementation dates, vaccination rates over time, and covid-19 cases and deaths, v
-- 
+- Time series utilizing policy implementation dates, vaccination rates over time, and covid-19 cases and deaths, vaccination rates
+- Clustering counties and then analyzing clusters in black box and white-box models
