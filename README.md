@@ -1,7 +1,5 @@
-# Project_4-Group_Project
-
 # Preparing for the next Pandemic:
-### An analysis of the Covid-19 Pandemic at the State and County Levels
+## An analysis of the Covid-19 Pandemic at the State and County Levels
 
 ## Problem Statement
 In 2023, with the total number of new coronavirus cases decreasing and the Pandemic beginning to stabilize, Congress directed the Department of Health and Human Services (HHS) to conduct an in-depth analysis of the coronavirus pandemic. After more than 1 million Americans died during the pandemic, Congress tasked HHS with creating a report detailing how the response to Pandemic could have been improved as well as crafting a resiliency plan aimed at reducing death tolls of future pandemics. 
